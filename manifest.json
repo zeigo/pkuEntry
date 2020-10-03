@@ -1,0 +1,24 @@
+{
+  "name": "Pku Entry",
+  "description": "北大出入校备案一键填写",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://simso.pku.edu.cn/*"
+      ],
+      "js": [
+        "populate.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
